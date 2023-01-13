@@ -1,0 +1,169 @@
+.home-container {
+	background-attachment: fixed;
+	background-image: url("/src/images/curve-fi-bg.png");
+	background-position: top;
+	background-repeat: no-repeat;
+	background-size: contain;
+	padding: 30px 0;
+	height: 100vh;
+	padding-top: 10rem;
+}
+.swap-card {
+	width: 30%;
+	background: white;
+	height: 500px;
+	box-shadow: 2px 2px grey;
+	margin: auto;
+}
+.swap-card-body {
+	margin: 23px 25px;
+}
+.swap-first-input,
+.swap-second-input {
+	display: flex;
+	flex-direction: column;
+}
+.price-info {
+	border: 1px solid grey;
+	padding: 0px 5px;
+	width: 16px;
+	height: 18px;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+}
+.advance-settings {
+	background-color: rgb(var(--bs-light-rgb)) !important;
+}
+.radio-buttons-settings {
+	display: flex;
+	gap: 10px;
+	flex-direction: column;
+	margin-top: 10px;
+	font-weight: 600;
+}
+.radio-input-setting {
+	padding: 10px;
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+}
+.discard-save-btn {
+	margin: 20px;
+	display: flex;
+	gap: 10px;
+}
+.discard-btn {
+	border: none;
+	padding: 15px 70px;
+}
+.discard-btn:hover {
+	background-color: rgba(212, 238, 252, 0.908);
+}
+.save-btn {
+	border: none;
+	background-color: rgb(32, 173, 255);
+	padding: 15px 70px;
+	color: white;
+	-webkit-box-shadow: 4px 4px 0px -2px rgba(2, 78, 122, 0.98);
+	-moz-box-shadow: 4px 4px 0px -2px rgba(2, 78, 122, 0.98);
+	box-shadow: 4px 4px 0px -2px rgba(2, 78, 122, 0.98);
+}
+.save-btn:hover {
+	background-color: rgb(115, 200, 249);
+	transition: 500ms;
+}
+.custom-input-setting {
+	display: flex;
+	gap: 10px;
+	align-items: center;
+}
+.advance-setting-text {
+	font-size: 25px;
+	font-weight: 600;
+}
+.swap-first-input,
+.swap-second-input {
+	position: relative;
+}
+.swap-first-input > button,
+.swap-second-input > button {
+	position: absolute;
+	top: 9px;
+	right: 12px;
+	padding: 4px 10px;
+	border: 1px solid grey;
+	background: white;
+	box-shadow: 4px 4px 0px -2px rgb(142 141 141 / 75%);
+}
+.swap-first-input > button:hover,
+.swap-second-input > button:hover {
+	background: rgb(242, 242, 242);
+	transition: 500ms;
+}
+.swap-first-input input {
+	padding: 12px 10px;
+	position: relative;
+}
+.swap-second-input input {
+	padding: 12px 10px;
+}
+.select-token {
+	width: 460px;
+	height: 550px;
+	background-color: rgb(var(--bs-light-rgb)) !important;
+	padding: 10px 20px;
+}
+.select-token-header {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 20px;
+}
+.select-token-header .header-text {
+	font-size: 24px;
+	font-weight: 600;
+}
+.select-token-header .close-btn {
+	font-size: 30px;
+	margin-top: -10px;
+	cursor: pointer;
+}
+.search-input {
+	position: relative;
+}
+.search-input > input {
+	padding: 10px 10px 10px 36px;
+	border-bottom: 1px solid black;
+	border-right: 1px solid black;
+	width: 100%;
+}
+.search-input > svg {
+	position: absolute;
+	top: 15px;
+	left: 12px;
+}
+.coins-box {
+	margin-top: 20px;
+	display: flex;
+	gap: 10px;
+	flex-wrap: wrap;
+}
+.coins-box .each-coin {
+	border: 1px solid grey;
+	padding: 5px 10px;
+	display: inline-block;
+	cursor: pointer;
+}
+.coins-box .each-coin:hover {
+	background-color: rgba(241, 241, 241, 0.782);
+}
+.coins-list {
+	height: 260px;
+	overflow-y: scroll;
+}
+.single-coin {
+	padding: 10px;
+	cursor: pointer;
+}
+.single-coin:hover {
+	background-color: rgb(218, 218, 218);
+}
