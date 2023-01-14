@@ -15,6 +15,9 @@
 .font-lg {
 	font-size: 18px;
 }
+.app-bg {
+	background-color: rgba(var(--bs-light-rgb)) !important;
+}
 
 /* Tooltip */
 .tooltip-info {

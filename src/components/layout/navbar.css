@@ -27,6 +27,11 @@
 	-moz-box-shadow: 4px 4px 0px -2px rgba(0, 0, 0, 0.75);
 	box-shadow: 4px 4px 0px -2px rgba(0, 0, 0, 0.75);
 }
+.connect-wallet:hover {
+	color: #3a4c96;
+	background: #dadaff;
+	transition: 500ms;
+}
 .connect-wallet-modal {
 	width: 730px;
 	height: 400px;
@@ -91,6 +96,17 @@
 	border: 1px solid grey;
 	border-radius: 12px;
 	padding: 6px;
+}
+.hover-bird {
+	color: rgb(221, 221, 20);
+}
+.hover-bird:hover {
+	color: rgb(148, 143, 4);
+	transition: 500ms;
+}
+.social-links:hover {
+	color: rgb(5, 154, 208);
+	transition: 500ms;
 }
 @media only screen and (min-width: 200px) and (max-width: 600px) {
 	.topbar-web {

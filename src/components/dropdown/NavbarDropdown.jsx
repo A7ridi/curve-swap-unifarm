@@ -69,6 +69,11 @@ const customStyles = {
 		borderRadius: 0,
 		backgroundColor: "transparent",
 		cursor: "pointer",
+		"&:hover": {
+			borderColor: "#dadaff",
+			color: "#3a4c96",
+			background: "#dadaff",
+		},
 	}),
 	menuList: () => ({
 		maxHeight: "500px",
@@ -104,7 +109,6 @@ const NavbarDropdown = () => {
 				components={{
 					IndicatorSeparator: () => null,
 				}}
-				// menuIsOpen={true}
 			/>
 		</>
 	);

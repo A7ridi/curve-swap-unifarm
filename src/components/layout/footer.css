@@ -1,0 +1,18 @@
+.footer {
+	background-color: #495456;
+	padding: 20px 40px;
+	color: white;
+}
+.footer-left {
+	flex: 0.4;
+}
+.footer-right {
+	flex: 0.6;
+	display: flex;
+	gap: 20px;
+}
+.hover-link:hover {
+	color: rgb(156, 173, 188);
+	transition: 500ms;
+	cursor: pointer;
+}

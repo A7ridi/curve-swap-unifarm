@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import "./home.css";
-import ConnectWallet from "./modal/ConnectWallet";
+import ConnectWallet from "../modal/ConnectWallet";
 import { MdSwapVert } from "react-icons/md";
-import SettingModal from "./modal/SettingModal";
+import SettingModal from "../modal/SettingModal";
 import { GiFinch } from "react-icons/gi";
 import { FaRegRegistered } from "react-icons/fa";
-import SelectToken from "./modal/SelectToken";
+import SelectToken from "../modal/SelectToken";
 
 const Home = () => {
 	const [firstCoin, setFirstCoin] = useState({

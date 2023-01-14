@@ -1,10 +1,10 @@
 import "./App.css";
-import AppNavbar from "./components/Navbar";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Home from "./components/Home";
-import Footer from "./components/Footer";
-import Pools from "./components/Pools";
-import Dashboard from "./components/Dashboard";
+import Footer from "./components/layout/Footer";
+import Pools from "./components/pools/Pools";
+import Dashboard from "./components/dashboard/Dashboard";
+import Home from "./components/home/Home";
+import AppNavbar from "./components/layout/Navbar";
 
 function App() {
 	return (

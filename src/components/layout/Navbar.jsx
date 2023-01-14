@@ -8,8 +8,9 @@ import "./navbar.css";
 import { AiOutlineTwitter } from "react-icons/ai";
 import { FaDiscord, FaGithub } from "react-icons/fa";
 import { FaTelegramPlane } from "react-icons/fa";
-import NavbarDropdown from "./dropdown/NavbarDropdown";
-import ConnectWallet from "./modal/ConnectWallet";
+import NavbarDropdown from "../dropdown/NavbarDropdown";
+import ConnectWallet from "../modal/ConnectWallet";
+import { GiHummingbird } from "react-icons/gi";
 
 const tabsLink = [
 	{
@@ -40,19 +41,41 @@ function AppNavbar() {
 					<div className="d-flex flex-column" style={{ width: "89%" }}>
 						<Nav className="flex-grow-1 topbar-web d-flex justify-content-between mx-2 pt-1">
 							<div className="d-flex">
-								<span className="fw-semibold me-4">
+								<span className="fw-semibold me-4 font-sm">
 									Total Deposits: $3,647,302,178
 								</span>
-								<span className="fw-semibold">Daily Volume: $336,013,931</span>
+								<span className="fw-semibold font-sm">
+									Daily Volume: $336,013,931
+								</span>
 							</div>
 
 							<div className="d-flex align-items-center">
-								<span className="fw-semibold me-2">Visit Old UI</span>
-								<span className="fw-semibold me-4">Governance</span>
-								<AiOutlineTwitter size="1.3rem" className="me-3" />
-								<FaTelegramPlane size="1.3rem" className="me-3" />
-								<FaGithub size="1.3rem" className="me-3" />
-								<FaDiscord size="1.3rem" className="me-3" />
+								<Link to="/" className="text-decoration-none text-dark">
+									<span className="fw-semibold me-3 font-sm">Visit Old UI</span>
+								</Link>
+								<Link to="/" className="text-decoration-none text-dark">
+									<span className="fw-semibold me-4 font-sm">Governance</span>
+								</Link>
+								<GiHummingbird
+									size="1.3rem"
+									className="me-4 cursor-pointer hover-bird"
+								/>
+								<AiOutlineTwitter
+									size="1.3rem"
+									className="me-3 cursor-pointer social-links"
+								/>
+								<FaTelegramPlane
+									size="1.3rem"
+									className="me-3 cursor-pointer social-links"
+								/>
+								<FaGithub
+									size="1.3rem"
+									className="me-3 cursor-pointer social-links"
+								/>
+								<FaDiscord
+									size="1.3rem"
+									className="me-3 cursor-pointer social-links"
+								/>
 							</div>
 						</Nav>
 
@@ -83,8 +106,8 @@ function AppNavbar() {
 												to={item.link}
 												className={({ isActive }) =>
 													isActive
-														? "bg-dark p-2 text-light text-decoration-none fw-semibold"
-														: "text-dark bg-light text-decoration-none fw-semibold"
+														? "bg-dark p-2 text-light text-decoration-none fw-semibold font-sm"
+														: "text-dark bg-light text-decoration-none fw-semibold font-sm"
 												}
 											>
 												{item.name}

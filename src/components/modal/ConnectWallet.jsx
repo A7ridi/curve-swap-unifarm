@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { BsFillCircleFill } from "react-icons/bs";
-import { logoImg } from "../logo";
+import { logoImg } from "../layout/logo";
 import Stepper from "../stepper/Stepper";
 import Modal from "./Modal";
 import { AiFillLock, AiOutlineWifi } from "react-icons/ai";
@@ -36,7 +36,7 @@ const ConnectWallet = ({ type = "navbar" }) => {
 	return (
 		<>
 			<button
-				className={`px-3 py-1 d-flex align-items-center connect-wallet ${
+				className={`px-3 py-1 d-flex align-items-center connect-wallet fw-semibold ${
 					type === "swap" ? "w-100 justify-content-center" : ""
 				}`}
 				onClick={toggleModal}
