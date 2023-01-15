@@ -112,7 +112,7 @@ function AppNavbar() {
 									</div>
 								</div>
 
-								<div className="d-flex justify-content-between my-2">
+								<div className="d-flex justify-content-between mt-2 mb-1">
 									<Navbar.Toggle
 										aria-controls={`offcanvasNavbar-expand-${expand}`}
 									/>

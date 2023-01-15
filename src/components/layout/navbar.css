@@ -122,6 +122,9 @@
 	.topbar-web {
 		display: none !important;
 	}
+	.navbar-view {
+		margin-bottom: 15px;
+	}
 	.offcanvas {
 		max-width: 75% !important;
 	}
