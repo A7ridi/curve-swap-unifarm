@@ -36,13 +36,13 @@ const Footer = () => {
 							<span className="my-1 hover-link">Events</span>
 							<span className="my-1 hover-link">Contracts</span>
 						</div>
-						<div className="d-flex flex-column me-5">
+						<div className="d-flex flex-column">
 							<span className="my-1 hover-link">Bug Bounty</span>
 							<span className="my-1 hover-link">FAQ</span>
 							<span className="my-1 hover-link">Integrations</span>
 							<span className="my-1 hover-link">Donate</span>
 						</div>
-						<div className="d-flex flex-column">
+						<div className="d-flex flex-column resource-last-link">
 							<span className="my-1 hover-link">Developer Docs</span>
 							<span className="my-1 hover-link">News</span>
 							<span className="my-1 hover-link">Resources</span>

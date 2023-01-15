@@ -40,6 +40,10 @@ const ConnectWallet = ({ type = "navbar" }) => {
 					type === "swap" ? "w-100 justify-content-center" : ""
 				}`}
 				onClick={toggleModal}
+				style={{
+					background: `${type === "swap" && "#1763fd"}`,
+					color: `${type === "swap" && "#fff"}`,
+				}}
 			>
 				{type === "navbar" && (
 					<BsFillCircleFill size="13px" className="me-3 text-danger" />

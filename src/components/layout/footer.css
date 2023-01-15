@@ -16,6 +16,9 @@
 	transition: 500ms;
 	cursor: pointer;
 }
+.resource-last-link {
+	margin-left: 45px;
+}
 @media only screen and (min-width: 200px) and (max-width: 600px) {
 	.footer {
 		display: flex;
@@ -27,6 +30,9 @@
 	}
 	.resources-link {
 		flex-wrap: wrap;
+	}
+	.resource-last-link {
+		margin-left: 0px;
 	}
 }
 @media only screen and (min-width: 601px) and (max-width: 800px) {

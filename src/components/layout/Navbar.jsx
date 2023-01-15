@@ -96,8 +96,8 @@ function AppNavbar() {
 												to={item.link}
 												className={({ isActive }) =>
 													isActive
-														? "bg-dark p-2 text-light text-decoration-none fw-semibold font-sm"
-														: "text-dark bg-light text-decoration-none fw-semibold font-sm"
+														? "p-2 text-decoration-none fw-semibold font-sm tab-selected"
+														: "text-decoration-none fw-semibold font-sm text-dark"
 												}
 											>
 												{item.name}
@@ -150,8 +150,8 @@ function AppNavbar() {
 													to={item.link}
 													className={({ isActive }) =>
 														isActive
-															? "bg-dark p-2 text-light text-decoration-none fw-semibold font-sm"
-															: "text-dark p-2 bg-light text-decoration-none fw-semibold font-sm"
+															? "tab-selected p-2 text-decoration-none fw-semibold font-sm"
+															: "text-dark p-2 text-decoration-none fw-semibold font-sm"
 													}
 												>
 													{item.name}

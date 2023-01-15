@@ -118,6 +118,10 @@
 	color: rgb(0, 166, 255);
 	transition: 500ms;
 }
+.tab-selected {
+	color: #1763fd;
+	background: #1763fd30;
+}
 @media only screen and (min-width: 200px) and (max-width: 600px) {
 	.topbar-web {
 		display: none !important;
@@ -128,8 +132,12 @@
 	.offcanvas {
 		max-width: 75% !important;
 	}
+	.offcanvas-header {
+		background-color: rgba(var(--bs-light-rgb)) !important;
+	}
 	.offcanvas-body {
 		margin-top: -20px;
+		background-color: rgba(var(--bs-light-rgb)) !important;
 	}
 	.connect-wallet {
 		font-size: 14px;
