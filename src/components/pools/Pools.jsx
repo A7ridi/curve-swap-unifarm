@@ -59,7 +59,7 @@ const Pools = () => {
 								id="flexCheckDefault"
 							/>
 							<label
-								className="form-check-label cursor-pointer fw-semibold"
+								className="form-check-label cursor-pointer fw-semibold hide-token-text"
 								for="flexCheckDefault"
 							>
 								Hide very small pools
@@ -72,14 +72,23 @@ const Pools = () => {
 					<table class="table">
 						<thead>
 							<tr>
-								<th scope="col" style={{ width: "40%" }}>
+								<th
+									scope="col"
+									className="table-header-text"
+									style={{ width: "40%" }}
+								>
 									Pool
 								</th>
-								<th scope="col align-middle">Factory</th>
-								<th scope="col align-middle">Type</th>
+								<th scope="col align-middle" className="table-header-text">
+									Factory
+								</th>
+								<th scope="col align-middle" className="table-header-text">
+									Type
+								</th>
 								<th
 									scope="col align-middle d-flex flex-column"
 									style={{ width: "30%" }}
+									className="table-header-text"
 								>
 									<div className="d-flex align-items-center base-vapy">
 										Base vAPY
@@ -111,8 +120,12 @@ const Pools = () => {
 										<span> + Incentives)</span>
 									</div>
 								</th>
-								<th scope="col align-middle">Volume</th>
-								<th scope="col align-middle">TVL</th>
+								<th scope="col align-middle" className="table-header-text">
+									Volume
+								</th>
+								<th scope="col align-middle" className="table-header-text">
+									TVL
+								</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -124,15 +137,25 @@ const Pools = () => {
 												<MultipleLogo />
 											</div>
 											<div className="">
-												<div className="fw-semibold">3Pool</div>
-												<div className="font-sm">{coin.address}</div>
-												<div className="font-sm">{coin.related}</div>
+												<div className="fw-semibold table-header-text">
+													3Pool
+												</div>
+												<div className="font-sm table-data-text">
+													{coin.address}
+												</div>
+												<div className="font-sm table-data-text">
+													{coin.related}
+												</div>
 											</div>
 										</td>
-										<td className="align-middle">{coin.factory}</td>
-										<td className="align-middle">{coin.type}</td>
-										<td className="align-middle">
-											<div className="d-flex flex-column">
+										<td className="align-middle table-header-text">
+											{coin.factory}
+										</td>
+										<td className="align-middle table-header-text">
+											{coin.type}
+										</td>
+										<td className="align-middle table-header-text">
+											<div className="d-flex flex-column table-header-text">
 												{coin.base}
 												<div>
 													0.33%
@@ -141,8 +164,12 @@ const Pools = () => {
 												</div>
 											</div>
 										</td>
-										<td className="align-middle">{coin.volume}</td>
-										<td className="align-middle">{coin.tvl}</td>
+										<td className="align-middle table-header-text">
+											{coin.volume}
+										</td>
+										<td className="align-middle table-header-text">
+											{coin.tvl}
+										</td>
 									</tr>
 								);
 							})}

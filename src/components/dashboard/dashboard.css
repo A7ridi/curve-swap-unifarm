@@ -40,3 +40,59 @@
 .bottom-line {
 	border-bottom: 1px solid rgb(204, 204, 204);
 }
+.view-address-mobile {
+	display: none;
+}
+@media only screen and (min-width: 200px) and (max-width: 600px) {
+	.vertical-line,
+	.view-address {
+		display: none;
+	}
+	.view-address-mobile {
+		justify-content: space-between;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		display: block;
+		flex: 1;
+		flex-grow: 1;
+	}
+	.view-address-mobile input {
+		padding: 5px;
+		margin-bottom: 10px;
+		width: 100%;
+		border-bottom: 1px solid grey;
+		border-right: 1px solid grey;
+	}
+	.dashboard-top {
+		display: flex;
+		flex-direction: column;
+	}
+	.total-balances {
+		font-size: 14px;
+		margin-bottom: 3rem;
+	}
+	.total-vecrv-text {
+		font-size: 14px;
+	}
+	.vecrv-text {
+		font-size: 12px;
+	}
+	.claim-rewards-text {
+		font-size: 14px;
+		width: 100% !important;
+	}
+	.dashboard-middle {
+		display: flex;
+		flex-direction: column;
+		padding: 10px 0px !important;
+	}
+	.daily-profits {
+		margin: 10px 0px;
+	}
+	.claimable-tokens {
+		padding: 0px;
+		margin-top: 20px;
+		margin-bottom: 10px;
+	}
+}

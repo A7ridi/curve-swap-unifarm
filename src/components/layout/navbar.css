@@ -11,6 +11,9 @@
 	border: none;
 	color: black;
 }
+.navbar-header {
+	width: 89% !important;
+}
 .navbar-toggler:focus {
 	text-decoration: none;
 	outline: 0;
@@ -108,6 +111,13 @@
 	color: rgb(5, 154, 208);
 	transition: 500ms;
 }
+.navbar-view {
+	width: 100vw;
+}
+.visit-old-ui:hover {
+	color: rgb(0, 166, 255);
+	transition: 500ms;
+}
 @media only screen and (min-width: 200px) and (max-width: 600px) {
 	.topbar-web {
 		display: none !important;
@@ -118,9 +128,45 @@
 	.offcanvas-body {
 		margin-top: -20px;
 	}
+	.connect-wallet {
+		font-size: 14px;
+		width: 63%;
+	}
+	.connect-wallet-sidebar {
+		position: fixed;
+		bottom: 2%;
+		width: 100%;
+	}
+	.connect-wallet-left {
+		display: none;
+	}
+	.connect-wallet-modal {
+		overflow: auto;
+		border-radius: 15px;
+	}
+	.connect-right-top {
+		width: 100vw;
+	}
+	.connect-right-middle .card {
+		width: 90vw;
+	}
+	.offcanvas-header .btn-close {
+		font-size: 13px;
+	}
+	.container-fluid {
+		padding: 0px;
+	}
+	.navbar-toggler-icon {
+		width: 1.3rem;
+	}
 }
 @media only screen and (min-width: 601px) {
 	.topbar-mobile {
 		display: none;
+	}
+}
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+	.navbar-header {
+		width: 100% !important;
 	}
 }

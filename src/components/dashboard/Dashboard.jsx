@@ -10,19 +10,24 @@ const Dashboard = () => {
 		<div className="home-container">
 			<div className="pools-card">
 				<div className="px-3 pt-4 pb-2 d-flex dashboard-top app-bg">
+					<div className="view-address-mobile">
+						<input type="text" placeholder="0x..." />
+					</div>
 					<div className="total-balances">
-						<span className="fw-bold font-lg mb-2">Total Balances</span>
+						<span className="fw-bold font-lg mb-2 total-balances">
+							Total Balances
+						</span>
 					</div>
 					<div className="vertical-line"></div>
 					<div className="total-vecrv">
-						<div className="fw-bold font-lg">Total veCRV</div>
-						<div className="font-sm">
+						<div className="fw-bold font-lg total-vecrv-text">Total veCRV</div>
+						<div className="font-sm vecrv-text">
 							veCRV <span className="fw-semibold">0</span>
 						</div>
-						<div className="font-sm">
+						<div className="font-sm vecrv-text">
 							Locked for <span className="fw-semibold">0</span> days
 						</div>
-						<div className="font-sm d-flex align-items-center mt-2">
+						<div className="font-sm d-flex align-items-center mt-2 vecrv-text">
 							veCRV rewards:
 							<span className="fw-semibold d-flex align-items-center ms-1">
 								0.00 3crv
@@ -37,7 +42,7 @@ const Dashboard = () => {
 								</span>
 							</span>
 						</div>
-						<button className="btn btn-primary px-5 my-2 w-75">
+						<button className="btn btn-primary px-5 my-2 w-75 claim-rewards-text">
 							Claim LP Rewards
 						</button>
 					</div>
@@ -48,33 +53,37 @@ const Dashboard = () => {
 					</div>
 				</div>
 
-				<div className="my-2 d-flex p-3 mx-3">
+				<div className="my-2 d-flex p-3 mx-3 dashboard-middle">
 					<div className="daily-profits">
-						<div className="fw-bold mb-1">Total Daily Profits</div>
+						<div className="fw-bold mb-1 total-vecrv-text">
+							Total Daily Profits
+						</div>
 						<div className="d-flex justify-content-between bottom-line mb-1">
-							<span>Base</span>
-							<span>0</span>
+							<span className="vecrv-text">Base</span>
+							<span className="vecrv-text">0</span>
 						</div>
 
 						<div className="d-flex justify-content-between bottom-line mb-1">
-							<span>CRV</span>
-							<span>0</span>
+							<span className="vecrv-text">CRV</span>
+							<span className="vecrv-text">0</span>
 						</div>
 						<div className="d-flex justify-content-between">
-							<span className="fw-semibold">USD Total</span>
-							<span className="fw-semibold">≈ $0</span>
+							<span className="fw-semibold vecrv-text">USD Total</span>
+							<span className="fw-semibold vecrv-text">≈ $0</span>
 						</div>
 					</div>
 
 					<div className="claimable-tokens">
-						<div className="fw-bold mb-1">Claimable Tokens</div>
+						<div className="fw-bold mb-1 total-vecrv-text">
+							Claimable Tokens
+						</div>
 						<div className="d-flex justify-content-between bottom-line mb-1">
-							<span>CRV</span>
-							<span>0</span>
+							<span className="vecrv-text">CRV</span>
+							<span className="vecrv-text">0</span>
 						</div>
 						<div className="d-flex justify-content-between">
-							<span className="fw-semibold">USD Total</span>
-							<span className="fw-semibold">≈ $0</span>
+							<span className="fw-semibold vecrv-text">USD Total</span>
+							<span className="fw-semibold vecrv-text">≈ $0</span>
 						</div>
 					</div>
 				</div>
@@ -85,7 +94,7 @@ const Dashboard = () => {
 							<tr className="app-bg">
 								<th
 									scope="col"
-									className="align-middle"
+									className="align-middle table-header-text"
 									style={{ width: "40%" }}
 								>
 									Pool
@@ -95,7 +104,7 @@ const Dashboard = () => {
 									style={{ width: "30%" }}
 									className="align-middle"
 								>
-									<div className="d-flex align-items-center base-vapy">
+									<div className="d-flex align-items-center base-vapy table-header-text">
 										Base vAPY
 										<span className="font-sm fw-semibold price-info tooltip-info mx-1 base-vapy">
 											i
@@ -108,7 +117,7 @@ const Dashboard = () => {
 										</span>
 									</div>
 									<div className="d-flex align-items-center">
-										<div className="base-vapy d-flex align-items-center">
+										<div className="base-vapy d-flex align-items-center table-header-text">
 											Rewards tAPR
 											<span className="font-sm fw-semibold price-info tooltip-info mx-1 base-vapy">
 												i
@@ -125,16 +134,16 @@ const Dashboard = () => {
 										<span> + Incentives)</span>
 									</div>
 								</th>
-								<th scope="col" className="align-middle">
+								<th scope="col" className="align-middle table-header-text">
 									Balance
 								</th>
 								<th scope="col" className="align-middle">
 									<div className="d-flex flex-column">
-										<span>USD Profits</span>
-										<span>CRV Profits</span>
+										<span className="table-header-text">USD Profits</span>
+										<span className="table-header-text">CRV Profits</span>
 									</div>
 								</th>
-								<th scope="col" className="align-middle">
+								<th scope="col" className="align-middle table-header-text">
 									Claimable Tokens
 								</th>
 							</tr>
@@ -148,13 +157,19 @@ const Dashboard = () => {
 												<MultipleLogo />
 											</div>
 											<div className="">
-												<div className="fw-semibold">3Pool</div>
-												<div className="font-sm">{coin.address}</div>
-												<div className="font-sm">{coin.related}</div>
+												<div className="fw-semibold table-header-text">
+													3Pool
+												</div>
+												<div className="font-smtable-data-text">
+													{coin.address}
+												</div>
+												<div className="font-sm table-data-text">
+													{coin.related}
+												</div>
 											</div>
 										</td>
 										<td className="align-middle">
-											<div className="d-flex flex-column">
+											<div className="d-flex flex-column table-header-text">
 												{coin.base}
 												<div>
 													0.33%
@@ -163,9 +178,15 @@ const Dashboard = () => {
 												</div>
 											</div>
 										</td>
-										<td className="align-middle">{coin.volume}</td>
-										<td className="align-middle">{coin.tvl}</td>
-										<td className="align-middle">{coin.tvl}</td>
+										<td className="align-middle table-header-text">
+											{coin.volume}
+										</td>
+										<td className="align-middle table-header-text">
+											{coin.tvl}
+										</td>
+										<td className="align-middle table-header-text">
+											{coin.tvl}
+										</td>
 									</tr>
 								);
 							})}

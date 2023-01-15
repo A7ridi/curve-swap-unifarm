@@ -29,7 +29,7 @@ const Footer = () => {
 
 				<div className="resources">
 					<div className="fw-bold font-lg mb-2">Resources</div>
-					<div className="d-flex">
+					<div className="d-flex resources-link">
 						<div className="d-flex flex-column me-5">
 							<span className="my-1 hover-link">Whitepaper</span>
 							<span className="my-1 hover-link">Audits</span>

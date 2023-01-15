@@ -41,7 +41,7 @@ const SettingModal = ({ type = "filter", size = "12px" }) => {
 
 						<div className="setting-body px-3 mt-4">
 							<div className="d-flex align-items-center">
-								<span className="me-2">Max Slippage</span>
+								<span className="me-2 max-slippage">Max Slippage</span>
 								<span className="font-sm fw-semibold price-info tooltip-info">
 									i
 									<span

@@ -28,6 +28,8 @@ const Home = () => {
 		setSecondCoin(firstCoin);
 	};
 
+	const checkInnerWidth = window.innerWidth;
+
 	return (
 		<div className="home-container">
 			<div className="swap-card">
@@ -35,9 +37,7 @@ const Home = () => {
 					className="d-flex justify-content-between p-3"
 					style={{ background: "#e9e9e9" }}
 				>
-					<span className="fw-bold" style={{ fontSize: 20 }}>
-						Swap
-					</span>
+					<span className="fw-bold swap-text">Swap</span>
 
 					<SettingModal type="filter" />
 				</div>
@@ -107,11 +107,17 @@ const Home = () => {
 						<span className="font-sm fw-semibold">Price impact:</span>
 						<div className="d-flex align-items-center">
 							<span className="me-2 font-sm">0%</span>
-							<span className="font-sm fw-semibold price-info tooltip-info">
+							<span
+								className="font-sm fw-semibold price-info tooltip-info"
+								onClick={checkInnerWidth}
+							>
 								i
 								<span
 									className="tooltiptext"
-									style={{ marginLeft: "-6.5rem", width: "200px" }}
+									style={{
+										marginLeft: checkInnerWidth < 600 ? "-11.5rem" : `-6.5rem`,
+										width: "200px",
+									}}
 								>
 									Price change in the market that happens when a trader buys or
 									sells an asset

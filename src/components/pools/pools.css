@@ -58,3 +58,57 @@
 .coin-table-data:hover {
 	background-color: rgb(232, 232, 232);
 }
+@media only screen and (min-width: 200px) and (max-width: 600px) {
+	.pools-card {
+		width: 100vw;
+	}
+	.pool-close-btn {
+		background-color: white;
+		margin-top: 2px;
+		padding: 0px 5px;
+	}
+	.all-coins {
+		flex-direction: column;
+		height: 120px;
+		margin: 0px;
+		padding: 12px 20px;
+	}
+	.coin-list {
+		height: 30px;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	.coin-name {
+		font-size: 14px;
+		padding: 2px 4px;
+		height: 26px;
+	}
+	.mulitple-logo {
+		display: flex;
+	}
+	.first-row {
+		margin-bottom: 0px;
+	}
+	.second-row {
+		margin-top: 0px;
+	}
+	.table-header-text {
+		font-size: 14px;
+	}
+	.table-data-text {
+		font-size: 12px;
+	}
+	.coins-table {
+		overflow-x: auto;
+	}
+}
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+	.pools-card {
+		width: 100%;
+	}
+	.claim-rewards-text {
+		font-size: 14px;
+		padding: 10px !important;
+		width: 100% !important;
+	}
+}

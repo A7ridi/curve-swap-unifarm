@@ -5,7 +5,7 @@
 	background-repeat: no-repeat;
 	background-size: contain;
 	padding: 30px 0;
-	/* height: 100vh; */
+	overflow: hidden;
 	padding-top: 10rem;
 }
 .swap-card {
@@ -172,4 +172,58 @@
 	align-items: center;
 	justify-content: center;
 	height: 35vh;
+}
+.swap-text {
+	font-size: 20px;
+}
+.hide-token-text {
+	font-size: 16px;
+}
+@media only screen and (min-width: 200px) and (max-width: 600px) {
+	.swap-card {
+		width: 99%;
+		box-shadow: 0px 6px grey;
+	}
+	.home-container {
+		padding-top: 5rem;
+	}
+	.swap-card-body {
+		margin: 20px 15px;
+	}
+	.swap-text {
+		font-size: 17px;
+	}
+	.discard-btn,
+	.save-btn {
+		padding: 10px 20px;
+		font-size: 14px;
+		width: 50%;
+	}
+	.discard-save-btn {
+		margin: 20px 0px;
+	}
+	.advance-setting-text {
+		font-size: 16px;
+	}
+	.max-slippage {
+		font-size: 14px;
+	}
+	.select-token-header .header-text {
+		font-size: 20px;
+	}
+	.coins-box .each-coin {
+		padding: 5px;
+		font-size: 14px;
+	}
+	.hide-token-text {
+		font-size: 14px;
+	}
+	.advance-settings {
+		width: 100vw;
+	}
+}
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+	.swap-card {
+		width: 60%;
+	}
 }

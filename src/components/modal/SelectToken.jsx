@@ -100,7 +100,7 @@ const SelectToken = ({ toggleModal, setCoin = () => {} }) => {
 							id="flexCheckDefault"
 						/>
 						<label
-							className="form-check-label cursor-pointer fw-semibold"
+							className="form-check-label cursor-pointer fw-semibold hide-token-text"
 							for="flexCheckDefault"
 						>
 							Hide tokens from very small pools

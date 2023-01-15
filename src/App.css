@@ -40,7 +40,7 @@
 	border: 1px solid white;
 }
 .tooltip-info .tooltiptext::after {
-	content: "";
+	/* content: ""; */
 	position: absolute;
 	bottom: 100%;
 	left: 50%;
@@ -64,4 +64,19 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type="number"] {
 	-moz-appearance: textfield;
+}
+
+@media only screen and (min-width: 200px) and (max-width: 600px) {
+	.css-5snp2d-SelectContainer {
+		width: 161px !important;
+		height: 41px !important;
+	}
+	.css-1idq6kc-control {
+		font-size: 13px;
+	}
+}
+@media only screen and (min-width: 601px) and (max-width: 800px) {
+	.ModalPopup {
+		height: 114vh !important;
+	}
 }

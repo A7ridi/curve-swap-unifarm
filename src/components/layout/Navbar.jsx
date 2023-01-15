@@ -11,21 +11,7 @@ import { FaTelegramPlane } from "react-icons/fa";
 import NavbarDropdown from "../dropdown/NavbarDropdown";
 import ConnectWallet from "../modal/ConnectWallet";
 import { GiHummingbird } from "react-icons/gi";
-
-const tabsLink = [
-	{
-		name: "SWAP",
-		link: "/",
-	},
-	{
-		name: "POOLS",
-		link: "/pools",
-	},
-	{
-		name: "DASHBOARD",
-		link: "/dashboard",
-	},
-];
+import { sidebarLinks, tabsLink } from "./Links";
 
 function AppNavbar() {
 	return (
@@ -35,10 +21,10 @@ function AppNavbar() {
 					key={expand}
 					bg="light"
 					expand={expand}
-					className="d-flex align-items-center justify-content-center w-100 position-fixed"
+					className="d-flex align-items-center justify-content-center position-fixed navbar-view"
 					style={{ zIndex: 1 }}
 				>
-					<div className="d-flex flex-column" style={{ width: "89%" }}>
+					<div className="d-flex flex-column navbar-header">
 						<Nav className="flex-grow-1 topbar-web d-flex justify-content-between mx-2 pt-1">
 							<div className="d-flex">
 								<span className="fw-semibold me-4 font-sm">
@@ -51,10 +37,14 @@ function AppNavbar() {
 
 							<div className="d-flex align-items-center">
 								<Link to="/" className="text-decoration-none text-dark">
-									<span className="fw-semibold me-3 font-sm">Visit Old UI</span>
+									<span className="fw-semibold me-3 font-sm visit-old-ui">
+										Visit Old UI
+									</span>
 								</Link>
 								<Link to="/" className="text-decoration-none text-dark">
-									<span className="fw-semibold me-4 font-sm">Governance</span>
+									<span className="fw-semibold me-4 font-sm visit-old-ui">
+										Governance
+									</span>
 								</Link>
 								<GiHummingbird
 									size="1.3rem"
@@ -122,11 +112,13 @@ function AppNavbar() {
 									</div>
 								</div>
 
-								<div className="d-flex justify-content-between mt-3">
+								<div className="d-flex justify-content-between mt-2 mb-1">
 									<Navbar.Toggle
 										aria-controls={`offcanvasNavbar-expand-${expand}`}
 									/>
-									<span className="fw-semibold topbar-mobile">Hello Bro</span>
+									<span className="fw-semibold topbar-mobile">
+										<NavbarDropdown />
+									</span>
 								</div>
 
 								<Navbar.Offcanvas
@@ -152,32 +144,42 @@ function AppNavbar() {
 									</Offcanvas.Header>
 
 									<Offcanvas.Body>
-										<Nav className="justify-content-start flex-grow-1 pe-3 topbar-mobile">
-											<Nav.Link href="#action1">Swap</Nav.Link>
-											<Nav.Link href="#action2">Pools</Nav.Link>
-											<Nav.Link href="#action2">Dashboard</Nav.Link>
-											<Nav.Link href="#action2">Visit Old UI</Nav.Link>
-											<Nav.Link href="#action2">Governance</Nav.Link>
-											<Nav.Link href="#action2">Community</Nav.Link>
-											<Nav.Link href="#action2">Resources</Nav.Link>
-											<Nav.Link href="#action2">Mode</Nav.Link>
+										<Nav className="justify-content-start flex-grow-1 pe-3 topbar-mobile position-relative">
+											{sidebarLinks.map((item) => (
+												<NavLink
+													to={item.link}
+													className={({ isActive }) =>
+														isActive
+															? "bg-dark p-2 text-light text-decoration-none fw-semibold font-sm"
+															: "text-dark p-2 bg-light text-decoration-none fw-semibold font-sm"
+													}
+												>
+													{item.name}
+												</NavLink>
+											))}
 
-											<hr />
+											<hr style={{ margin: "0px" }} />
 
-											<div>
-												<span>TVL</span>
-												<span>$3,471,853,145</span>
+											<div className="px-2">
+												<div className="d-flex flex-column my-2">
+													<span className="font-lg fw-semibold">TVL</span>
+													<span className="font-sm">$3,471,853,145</span>
+												</div>
+												<div className="d-flex flex-column">
+													<span className="font-lg fw-semibold">
+														Daily Volume
+													</span>
+													<span className="font-sm">$150,876,939</span>
+												</div>
+
+												<div className="mt-2 mb-4">
+													<img src={sheepImg} alt="sheep" width={40} />
+												</div>
 											</div>
-											<div>
-												<span>Daily Volume</span>
-												<span>$150,876,939</span>
-											</div>
 
-											<div>
-												<img src={sheepImg} alt="sheep" />
+											<div className="connect-wallet-sidebar">
+												<ConnectWallet />
 											</div>
-
-											<button>Connect Wallet</button>
 										</Nav>
 									</Offcanvas.Body>
 								</Navbar.Offcanvas>
